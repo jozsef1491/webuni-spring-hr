@@ -20,13 +20,20 @@ public class SmartEmployeeService implements EmployeeService {
 	public int getPayRaisePercent(Employee employee) {
 		LocalDate today = LocalDate.now();
 		Period period = Period.between(today, employee.getStartingDate());
-		long diffYears = Math.abs(period.getYears());
+		double diffYears = Math.abs(period.getYears());
+		double diffMonths= Math.abs(period.getMonths());
+		double diffDays=Math.abs(period.getDays());
+		
+		double monthsInYear=diffMonths/12.0;
+		double daysInYear=diffDays/365.0;
+		double resultDate=diffYears+monthsInYear+daysInYear;
+		
 		int x = 0;
-		if (diffYears > config.getEmployeeRaisedPay().getSmart().getLimitHigh()) {
+		if (resultDate > config.getEmployeeRaisedPay().getSmart().getLimitHigh()) {
 			x = config.getEmployeeRaisedPay().getSmart().getPercentHigh();
-		} else if (diffYears > config.getEmployeeRaisedPay().getSmart().getLimitMiddle()) {
+		} else if (resultDate > config.getEmployeeRaisedPay().getSmart().getLimitMiddle()) {
 			x = config.getEmployeeRaisedPay().getSmart().getPercentMiddle();
-		} else if (diffYears > config.getEmployeeRaisedPay().getSmart().getLimitLow()) {
+		} else if (resultDate > config.getEmployeeRaisedPay().getSmart().getLimitLow()) {
 			x = config.getEmployeeRaisedPay().getSmart().getPercentLow();
 		} else
 			x = 0;

@@ -7,6 +7,6 @@ hr:
       limitHigh: 10
       limitMiddle: 5
       limitLow: 2.5
-      percentHigh: 10.5
-      percentMiddle: 5.5
+      percentHigh: 10
+      percentMiddle: 5
       percentLow: 2

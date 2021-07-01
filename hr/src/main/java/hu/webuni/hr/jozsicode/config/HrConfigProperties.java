@@ -54,35 +54,35 @@ public class HrConfigProperties {
 	}
 
 	public static class Smart {
-		private long limitHigh;
-		private long limitMiddle;
-		private long limitLow;
+		private double limitHigh;
+		private double limitMiddle;
+		private double limitLow;
 
 		private int percentHigh;
 		private int percentMiddle;
 		private int percentLow;
 
-		public long getLimitHigh() {
+		public double getLimitHigh() {
 			return limitHigh;
 		}
 
-		public void setLimitHigh(long limitHigh) {
+		public void setLimitHigh(double limitHigh) {
 			this.limitHigh = limitHigh;
 		}
 
-		public long getLimitMiddle() {
+		public double getLimitMiddle() {
 			return limitMiddle;
 		}
 
-		public void setLimitMiddle(long limitMiddle) {
+		public void setLimitMiddle(double limitMiddle) {
 			this.limitMiddle = limitMiddle;
 		}
 
-		public long getLimitLow() {
+		public double getLimitLow() {
 			return limitLow;
 		}
 
-		public void setLimitLow(long limitLow) {
+		public void setLimitLow(double limitLow) {
 			this.limitLow = limitLow;
 		}
 

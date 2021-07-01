@@ -28,6 +28,9 @@ public class HrApplication implements CommandLineRunner {
 		System.out.println(salaryService.getFinalSalary(new Employee(12, "Jill",Post.SALES,100_000,LocalDate.parse("2014-02-02"))));
 		System.out.println(salaryService.getFinalSalary(new Employee(13, "Anna",Post.SALES,100_000,LocalDate.parse("2017-06-11"))));
 		System.out.println(salaryService.getFinalSalary(new Employee(13, "Bela",Post.MECHANIC,100_000,LocalDate.parse("2019-04-06"))));
+	
+		System.out.println(salaryService.getFinalSalary(new Employee(13, "Cili",Post.ASSISTANT,100_000,LocalDate.parse("2019-01-25"))));
+		System.out.println(salaryService.getFinalSalary(new Employee(13, "Dezso",Post.TEAM_LEADER,100_000,LocalDate.parse("2018-11-14"))));
+		
 	}
-
 }
